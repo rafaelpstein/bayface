@@ -7,8 +7,7 @@ Requer Node.js 22.13 ou superior (usa o `node:sqlite` nativo).
     cp .env.example .env    # preencha ZABBIX_URL, ZABBIX_USER e ZABBIX_PASSWORD
     npm start               # http://localhost:3000
 
-Ao atualizar de uma versão anterior, o banco `dcim.db` existente é migrado sozinho.
-Datacenters antigos ficam sem sigla/país/UF/município até serem editados (o formulário exige os quatro campos).
+SISTEMA PARA CRIAÇÃO DE BAYFACE DE RACKS EM DATACENTER COM INTEGRAÇÃO COM ZABBIX E WHATSAPP.
 
 ## Telas
 - **Dashboard** (tela inicial): datacenters, racks, equipamentos, hosts do Zabbix sem rack, datacenters com mais
