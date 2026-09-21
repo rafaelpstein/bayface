@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bayface</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <header class="top">
+    <h1>Bayface</h1>
+    <nav class="tabs" aria-label="Seções">
+      <button id="tab-dash" class="tab" type="button">Dashboard</button>
+      <button id="tab-racks" class="tab" type="button">Racks</button>
+      <button id="tab-whats" class="tab" type="button">WhatsApp</button>
+    </nav>
+  </header>
+
+  <main id="view-dash" class="dash" aria-label="Dashboard"></main>
+
+  <main id="view-whats" class="dash" aria-label="WhatsApp" hidden></main>
+
+  <main id="view-racks" class="layout" hidden>
+    <aside class="col places" aria-label="Datacenters e racks">
+      <label class="lbl" for="dc-select">Datacenter</label>
+      <select id="dc-select"></select>
+      <div class="row">
+        <button id="dc-new" class="btn" type="button">Novo datacenter</button>
+        <button id="dc-edit" class="btn" type="button">Editar</button>
+      </div>
+
+      <div class="row-head">
+        <h2>Racks</h2>
+        <button id="rack-new" class="btn" type="button">Novo rack</button>
+      </div>
+      <div id="rack-list"></div>
+    </aside>
+
+    <section class="col stage" id="stage" aria-label="Rack selecionado"></section>
+
+    <aside class="col hosts" aria-label="Hosts do Zabbix">
+      <h2>Hosts do Zabbix</h2>
+      <input id="host-search" type="search" placeholder="Buscar por nome" aria-label="Buscar host por nome">
+      <select id="group-select" aria-label="Filtrar por grupo">
+        <option value="">Todos os grupos</option>
+      </select>
+      <p id="host-note" class="note"></p>
+      <ul id="hosts" class="host-list"></ul>
+    </aside>
+  </main>
+
+  <dialog id="dlg"></dialog>
+  <dialog id="dlg2"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
